@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xếp hạng</title>
+</head>
+<body>
+    <p id="hello">My name is Giang</p>
+    
+    <script>
+        var diemkt = window.prompt("Điểm kt: ");
+        var diemgk = window.prompt("Điểm gk: "); 
+        var diemck = window.prompt("Điểm ck: ");
+        var diemtb = ((+diemkt) + (+diemgk) + (+diemck))/3;
+        
+        if ((+diemkt)<=10 && (+diemgk)<= 10 && (+diemck) <=10 ){
+            if ( diemtb >= 9 && diemtb <=10 ){
+            document.write("Hang A");
+            }
+            else if ( diemtb >= 7){
+                document.write("Hang B");
+            }
+            else if ( diemtb >= 5){
+                document.write("Hang C");
+            }
+            else if ( diemtb < 5 && diemtb >=0) {
+                document.write("Hang F");
+            }
+        }
+        else if ((+diemkt) > 10 || (+diemgk) > 10 || (+diemck) > 10 ){
+            document.write("Số điểm bạn nhập > 10!");
+        }
+        else document.write("Bạn nhập sai rồi");
+               
+    </script>
+
+</body>
+</html>
